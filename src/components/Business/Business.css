@@ -38,9 +38,11 @@
     text-decoration: none;
     color: inherit;
   }
-  .Business-address a:hover {
+
+  a:hover {
     text-decoration: underline;
     color: inherit;
+    cursor: pointer;
   }
   
   .Business-reviews {
