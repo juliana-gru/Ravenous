@@ -20,8 +20,7 @@ class App extends React.Component {
       this.setState({
         businesses: businesses
       })
-    })
-    .catch(error => {console.log(error)});    
+    });    
   }
  
   render() {
