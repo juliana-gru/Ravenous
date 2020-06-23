@@ -33,6 +33,15 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .Business-address a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .Business-address a:hover {
+    text-decoration: underline;
+    color: inherit;
+  }
   
   .Business-reviews {
     display: flex;

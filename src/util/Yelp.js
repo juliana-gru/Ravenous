@@ -17,6 +17,7 @@ const Yelp = {
                        imageSrc: business.image_url,
                        name: business.name,
                        address: business.location.address1,
+                       displayAddress: business.location.display_address,
                        city: business.location.city,
                        state: business.location.state,
                        zipCode: business.location.zip_code,
