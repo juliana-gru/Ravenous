@@ -42,3 +42,9 @@ h1 {
   font-size: 1.8rem;
   color: #fff;
 }
+
+.loading {
+  text-align: center;
+  font-size: large;
+  padding-top: 30px;
+}

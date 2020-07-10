@@ -9,14 +9,18 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      businesses: []
+      businesses: [],
+      loading: false
     };
     this.searchYelp = this.searchYelp.bind(this);
   }
 
   searchYelp(term, location, sortBy) {
+    this.setState({loading: true});
     Yelp.search(term, location, sortBy).then(businesses => {
       this.setState({businesses: businesses})
+    }).then(()=> {
+      this.setState({loading: false})
     });    
   }
  
@@ -25,7 +29,8 @@ class App extends React.Component {
       <div className="App">
         <h1>ravenous</h1>
         <SearchBar searchYelp={this.searchYelp} />
-        <BusinessList businesses={this.state.businesses} />
+        {this.state.loading && <p className="loading">Searching...</p>}
+        <BusinessList businesses={this.state.businesses} />        
       </div>
     );
   }  
