@@ -29,7 +29,7 @@ class App extends React.Component {
       <div className="App">
         <h1>ravenous</h1>
         <SearchBar searchYelp={this.searchYelp} />
-        {this.state.loading && <p className="loading">Searching...</p>}
+        {this.state.loading && <p className="loading">Loading...</p>}
         <BusinessList businesses={this.state.businesses} />        
       </div>
     );
