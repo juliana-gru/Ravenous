@@ -9,3 +9,8 @@ Some additional features added by myself:
 -Show a 'loading' message while waiting for results from the API
 -Refresh the search when choosing a different "Sort By" option
 -Refactored code to prevent searches with empty terms
+-Refactored code to prevent searches that don't return any results from breaking the code.
+
+
+*Note from Yelp's API: 
+The rating sort is not strictly sorted by the rating value, but by an adjusted rating value that takes into account the number of ratings, similar to a Bayesian average. This is to prevent skewing results to businesses with a single review.
