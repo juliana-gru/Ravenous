@@ -29,14 +29,15 @@ class SearchBar extends React.Component {
     this.setState({
       sortBy: sortByOption,
     });
-    setTimeout(() => {
+    if (this.state.term) {
+      setTimeout(() => {
       this.props.searchYelp(
         this.state.term,
         this.state.location,
         this.state.sortBy
       );
-    }, 1000) ;
-    
+      }, 0) ;
+    }    
   }
 
   handleTermChange(event) {
@@ -53,20 +54,24 @@ class SearchBar extends React.Component {
 
   handleSearch(event) {
     event.preventDefault();
-    this.props.searchYelp(
-      this.state.term,
-      this.state.location,
-      this.state.sortBy
-    );    
+    if (this.state.term && this.state.location) {
+      this.props.searchYelp(
+        this.state.term,
+        this.state.location,
+        this.state.sortBy
+      );    
+    }
   }
 
   handleKeyDown(event) {
     if (event.keyCode !== 13) return;
-    this.props.searchYelp(
+    if (this.state.term && this.state.location) {
+      this.props.searchYelp(
       this.state.term,
       this.state.location,
       this.state.sortBy
-    ); 
+      );
+    }     
   }
 
   renderSortByOptions() {
