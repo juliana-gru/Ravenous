@@ -4,6 +4,8 @@ Built with ReactJS. Live on: http://ravenousweb.surge.sh
 
 This project is one of many built for Codecademy's course "Create a Front-end app with React". 
 
+=> CORS Anywhere is used to access data from the API. To gain temporary access to demo server you have to make a request through this link: https://cors-anywhere.herokuapp.com/corsdemo
+
 ### Some additional features added by myself:
 - Pressing the enter key triggers a search
 - Show a 'loading' message while waiting for results from the API
